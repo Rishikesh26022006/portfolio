@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rishikesh Sonawane - Data Scientist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #e5e7eb;
+        }
+        .text-gradient {
+            background-image: linear-gradient(to right, #34d399, #a3e635, #38bdf8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .bg-gradient-animated {
+            background: linear-gradient(-45deg, #0f172a, #064e3b, #0c4a6e, #1e293b);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .glass-effect {
+            background: rgba(17, 24, 39, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .scroll-reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .blinking-cursor {
+            display: inline-block;
+            width: 8px;
+            height: 1.5rem; /* Match text height */
+            background-color: #38bdf8;
+            animation: blink 1s step-end infinite;
+        }
+        @keyframes blink {
+            from, to { background-color: transparent }
+            50% { background-color: #38bdf8; }
+        }
+        /* Experience Timeline */
+        .timeline-item {
+            position: relative;
+            padding-left: 2.5rem;
+            padding-bottom: 2rem;
+            border-left: 2px solid #374151;
+        }
+        .timeline-item:last-child {
+            border-left: 2px solid transparent;
+        }
+        .timeline-dot {
+            position: absolute;
+            left: -9px; /* Adjust based on dot size */
+            top: 4px;
+            height: 1rem;
+            width: 1rem;
+            background-color: #14b8a6;
+            border-radius: 50%;
+            border: 2px solid #1f2937;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header id="header" class="glass-effect fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gradient">Rishikesh Sonawane</a>
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#about" class="text-gray-300 hover:text-white transition-colors">About</a>
+                <a href="#skills" class="text-gray-300 hover:text-white transition-colors">Skills</a>
+                <a href="#projects" class="text-gray-300 hover:text-white transition-colors">Projects</a>
+                <a href="#experience" class="text-gray-300 hover:text-white transition-colors">Experience</a>
+                <a href="#contact" class="bg-teal-600 hover:bg-teal-700 text-white font-medium py-2 px-4 rounded-lg transition-transform hover:scale-105">Contact</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-white">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#about" class="block py-2 text-gray-300 hover:text-white">About</a>
+            <a href="#skills" class="block py-2 text-gray-300 hover:text-white">Skills</a>
+            <a href="#projects" class="block py-2 text-gray-300 hover:text-white">Projects</a>
+            <a href="#experience" class="block py-2 text-gray-300 hover:text-white">Experience</a>
+            <a href="#contact" class="block mt-2 text-center bg-teal-600 hover:bg-teal-700 text-white font-medium py-2 px-4 rounded-lg">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex items-center bg-gradient-animated relative overflow-hidden">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-4">
+                    Building the Future with
+                    <br>
+                    <span id="typing-effect" class="text-gradient"></span><span class="blinking-cursor"></span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                    Innovative AI & Data Science Engineer specializing with a strong foundation in AI Powered Data Science and Machine Learning. I specialize in leveraging Detail-oriented and analytical Data Scientist with hands-on experience in machine learning, statistical analysis, and predictive modeling.
+                </p>
+                <div class="flex justify-center space-x-4">
+                    <a href="#projects" class="bg-gradient-to-r from-emerald-500 via-lime-500 to-sky-500 hover:opacity-90 text-white font-bold py-3 px-8 rounded-full transition-transform hover:scale-105 shadow-lg">View My Work</a>
+                    <a href="#contact" class="bg-gray-700/50 hover:bg-gray-600/50 text-white font-bold py-3 px-8 rounded-full transition-transform hover:scale-105 backdrop-blur-sm border border-gray-600 shadow-lg">Get In Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 md:py-32 bg-[#0a0a0a]">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-5 gap-12 items-center">
+                    <div class="md:col-span-2 scroll-reveal">
+                        <img src="Rishi.jpg" alt="Rishikesh Sonawane Portrait" class="rounded-2xl shadow-2xl w-full object-cover aspect-square">
+                    </div>
+                    <div class="md:col-span-3 scroll-reveal">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
+                        <p class="text-gray-400 mb-6">
+                            Hello! I'm Rishikesh, an innovative AI & Data Science Engineer with a strong foundation in AI Powered Data Science and Machine Learning. I specialize in leveraging Detail-oriented and analytical Data Scientist with hands-on experience in machine learning, statistical analysis, and predictive modeling. 
+                        </p>
+                        <p class="text-gray-400 mb-8">
+                            I am passionate about Using AI For developing machine learning models to analyze complex datasets to building full-stack applications, I am eager to contribute to impactful projects.
+                        </p>
+                        <a href="Rishikesh Resume Final.pdf" download class="inline-block bg-transparent border-2 border-teal-500 text-teal-400 font-semibold py-2 px-6 rounded-lg hover:bg-teal-500 hover:text-white transition-all">Download Resume</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 md:py-32 bg-gray-900/50">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-2">My Tech Arsenal</h2>
+                <p class="text-gray-400 mb-12">Technologies and tools I use to bring ideas to life.</p>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <!-- Skill Items -->
+                    <div class="flex flex-col items-center justify-center p-6 glass-effect rounded-2xl scroll-reveal transition-transform hover:-translate-y-2"><h3 class="font-semibold">Python</h3></div>
+                    <div class="flex flex-col items-center justify-center p-6 glass-effect rounded-2xl scroll-reveal transition-transform hover:-translate-y-2"><h3 class="font-semibold">TensorFlow</h3></div>
+                    <div class="flex flex-col items-center justify-center p-6 glass-effect rounded-2xl scroll-reveal transition-transform hover:-translate-y-2"><h3 class="font-semibold">Scikit-learn</h3></div>
+                    <div class="flex flex-col items-center justify-center p-6 glass-effect rounded-2xl scroll-reveal transition-transform hover:-translate-y-2"><h3 class="font-semibold">AI Automation</h3></div>
+                    <div class="flex flex-col items-center justify-center p-6 glass-effect rounded-2xl scroll-reveal transition-transform hover:-translate-y-2"><h3 class="font-semibold">Pandas</h3></div>
+                    <div class="flex flex-col items-center justify-center p-6 glass-effect rounded-2xl scroll-reveal transition-transform hover:-translate-y-2"><h3 class="font-semibold">NumPy</h3></div>
+                    <div class="flex flex-col items-center justify-center p-6 glass-effect rounded-2xl scroll-reveal transition-transform hover:-translate-y-2"><h3 class="font-semibold">SQL</h3></div>
+                    <div class="flex flex-col items-center justify-center p-6 glass-effect rounded-2xl scroll-reveal transition-transform hover:-translate-y-2"><h3 class="font-semibold">Git</h3></div>
+                    <div class="flex flex-col items-center justify-center p-6 glass-effect rounded-2xl scroll-reveal transition-transform hover:-translate-y-2"><h3 class="font-semibold">n8n</h3></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 md:py-32 bg-[#0a0a0a]">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Featured Projects</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project Card 1 -->
+                    <div class="glass-effect rounded-2xl overflow-hidden group scroll-reveal flex flex-col">
+                        <img src="Brain tumor.png" alt="Brain Tumor Classification" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold mb-2">Brain Tumor Classification</h3>
+                            <p class="text-gray-400 mb-4 text-sm flex-grow">Engineered an AI system to classify brain tumors from MRI scans, achieving 93% accuracy with an optimized EfficientNetB0 model and ensuring clinical interpretability with Grad-CAM and SHAP.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-indigo-500/20 text-indigo-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Python</span>
+                                <span class="bg-purple-500/20 text-purple-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">TensorFlow</span>
+                                <span class="bg-sky-500/20 text-sky-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Scikit-learn</span>
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <!-- Project Card 3 -->
+                    <div class="glass-effect rounded-2xl overflow-hidden group scroll-reveal flex flex-col">
+                        <img src="Project2.png" alt="E-Guruji Platform" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold mb-2">Integrated Retail Analytics & Demand Forecasting</h3>
+                            <p class="text-gray-400 mb-4 text-sm flex-grow">Developed this machine learning model analyzes store characteristics, seasonality, and economic data to accurately forecast future weekly sales for each department. Its predictions enable the business to make proactive, data-driven decisions on inventory, staffing, and marketing to maximize profitability.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-emerald-500/20 text-emerald-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Machine Learning</span>
+                                <span class="bg-rose-500/20 text-rose-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Python</span>
+                                <span class="bg-cyan-500/20 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Scikit-learn</span>
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <!-- Project Card 2 -->
+                    <div class="glass-effect rounded-2xl overflow-hidden group scroll-reveal flex flex-col">
+                        <img src="Ai voice assistant.png" alt="AI Voice Assistant" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold mb-2">AI Voice Assistant</h3>
+                            <p class="text-gray-400 mb-4 text-sm flex-grow">Designed a conversational AI voice assistant using the n8n workflow automation platform, integrated with the Eleven Labs API for real-time, human-like voice synthesis.</p>
+                             <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-pink-500/20 text-pink-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">n8n</span>
+                                <span class="bg-amber-500/20 text-amber-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Eleven Labs API</span>
+                                <span class="bg-teal-500/20 text-teal-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">AI Automation</span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-20 md:py-32 bg-gray-900/50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Professional Experience</h2>
+                <div class="max-w-3xl mx-auto">
+                    <div class="timeline-item scroll-reveal">
+                        <div class="timeline-dot"></div>
+                        <h3 class="text-xl font-bold text-white">Data Science Intern</h3>
+                        <p class="font-semibold text-teal-400 mb-1">Labmentix | Remote</p>
+                        <p class="text-sm text-gray-400 mb-4">June 2025 - Present</p>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li>Developed and implemented machine learning models to analyze complex datasets.</li>
+                            <li>Performed data cleaning, preprocessing, and exploratory data analysis.</li>
+                            <li>Collaborated with senior data scientists to design and deploy data-driven solutions.</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item scroll-reveal">
+                        <div class="timeline-dot"></div>
+                        <h3 class="text-xl font-bold text-white">Software Engineer Intern</h3>
+                        <p class="font-semibold text-teal-400 mb-1">Sapphire Infocom Pvt LTD | Remote</p>
+                        <p class="text-sm text-gray-400 mb-4">January 2025 - May 2025</p>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li>Contributed to the full software development lifecycle for client-facing web applications.</li>
+                            <li>Wrote, tested, and maintained clean code for new features.</li>
+                            <li>Collaborated with a remote team to debug software issues and implement effective solutions.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 md:py-32 bg-[#0a0a0a]">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto mb-8">
+                    I'm currently seeking new opportunities and would love to hear from you. Whether you have a question or just want to connect, feel free to reach out.
+                </p>
+                <a href="mailto:rishikeshsonawane530@gmail.com" class="inline-block bg-gradient-to-r from-emerald-500 via-lime-500 to-sky-500 hover:opacity-90 text-white font-bold py-3 px-8 rounded-full transition-transform hover:scale-105 shadow-lg">
+                    Say Hello
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900/50 py-8">
+        <div class="container mx-auto px-6 text-center text-gray-400">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="https://www.linkedin.com/in/rishikesh-sonawane-94022b373/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">LinkedIn</a>
+                
+            </div>
+            <p>&copy; 2025 Rishikesh Sonawane. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('py-2');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.add('py-4');
+                header.classList.remove('py-2');
+            }
+        });
+
+        // Scroll Reveal Animation
+        const scrollReveal = () => {
+            const elements = document.querySelectorAll('.scroll-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            elements.forEach(el => {
+                observer.observe(el);
+            });
+        };
+        scrollReveal();
+
+        // Typing Effect
+        const typingElement = document.getElementById('typing-effect');
+        const words = ["Data Science", "AI Automation", "Generative AI"];
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function type() {
+            const currentWord = words[wordIndex];
+            if (isDeleting) {
+                typingElement.textContent = currentWord.substring(0, charIndex--);
+            } else {
+                typingElement.textContent = currentWord.substring(0, charIndex++);
+            }
+
+            if (!isDeleting && charIndex === currentWord.length + 1) {
+                isDeleting = true;
+                setTimeout(type, 2000); // Pause at end of word
+            } else if (isDeleting && charIndex === -1) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+                setTimeout(type, 500); // Pause before new word
+            } else {
+                const typingSpeed = isDeleting ? 50 : 150;
+                setTimeout(type, typingSpeed);
+            }
+        }
+        document.addEventListener('DOMContentLoaded', type);
+    </script>
+</body>
+</html>
+
